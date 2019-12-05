@@ -9,7 +9,7 @@ COPY requirements.txt /opt/app/
 RUN pip install --upgrade pip
 RUN pip install -r /opt/app/requirements.txt
 COPY docker-entrypoint.sh /
-
+#exponemos el puerto 5000 hacia fuera de la imagen
 EXPOSE 5000
 #ejecutamos el programa
 ENTRYPOINT "/docker-entrypoint.sh"
